@@ -5,11 +5,11 @@ Frostivus Game Mode Logging
 timestamp = GetSystemDate() .. " " .. GetSystemTime()
 
 function FrostivusLogGameStart( args )
-	InitLogFile( "holdout_frostivus/" .. GetMapName() .. "/overview.csv",
+	InitLogFile( "holdout_frostivus_plus/" .. GetMapName() .. "/overview.csv",
 		"timestamp,final round,total deaths,gold bags,hero 1, hero 1 steamID, hero 1 level,hero 2, hero 2 steamID, hero 2 level,hero 3, hero 3 steamID, hero 3 level,hero 4, hero 4 steamID, hero 4 level,hero 5, hero 5 steamID, hero 5 level\n" )
-	InitLogFile( "holdout_frostivus/" .. GetMapName() .. "/heroes.csv",
+	InitLogFile( "holdout_frostivus_plus/" .. GetMapName() .. "/heroes.csv",
 		"timestamp,hero,hero steamID,hero level,final round,gold bags,kills,deaths,damage taken,damage dealt,damage healed,item 1,item 2,item 3,item 4,item 5,item 6\n" )
-	InitLogFile( "holdout_frostivus/" .. GetMapName() .. "/rounds.csv",
+	InitLogFile( "holdout_frostivus_plus/" .. GetMapName() .. "/rounds.csv",
 		"timestamp,round number,success,deaths,gold bags,tower damage,tower count,hero 1,hero 1 steamID,hero 1 level,hero 2,hero 2 steamID,hero 2 level,hero 3,hero 3 steamID,hero 3 level,hero 4,hero 4 steamID,hero 4 level,hero 5,hero 5 steamID,hero 5 level,time end\n" )
 end
 
@@ -27,7 +27,7 @@ function FrostivusLogGameEnd( args )
 		end
 	end
 
-	AppendToLogFile( "frostivus/" .. GetMapName() .. "/overview.csv",
+	AppendToLogFile( "frostivus_plus/" .. GetMapName() .. "/overview.csv",
 		timestamp .. "," ..
 		args.gamemode.nRoundNumber .. "," ..
 		nDeaths .. "," ..
@@ -45,7 +45,7 @@ function FrostivusLogGameEnd( args )
 			for j=0,5 do
 				vItems[j] = vHeroData[i].hero:GetItemInSlot( j )
 			end
-			AppendToLogFile( "frostivus/" .. GetMapName() .. "/heroes.csv",
+			AppendToLogFile( "frostivus_plus/" .. GetMapName() .. "/heroes.csv",
 				timestamp .. "," .. 
 				vHeroDescriptions[i] .. "," ..
 				args.gamemode.nRoundNumber .. "," ..
@@ -80,7 +80,7 @@ function FrostivusLogRoundEnd( args )
 		end
 	end
 
-	AppendToLogFile( "frostivus/" .. GetMapName() .. "/rounds.csv", 
+	AppendToLogFile( "frostivus_plus/" .. GetMapName() .. "/rounds.csv", 
 		timestamp .. "," ..
 		args.gamemode.nRoundNumber .. "," ..
 		tostring( args.success ) .. "," ..

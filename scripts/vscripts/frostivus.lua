@@ -8,7 +8,7 @@ Festive game mode for great fun.
 -- Written like this to allow reloading
 if FrostivusGameMode == nil then
 	FrostivusGameMode = {}
-	FrostivusGameMode.szEntityClassName = "frostivus"
+	FrostivusGameMode.szEntityClassName = "frostivus_plus"
 	FrostivusGameMode.szNativeClassName = "dota_base_game_mode"
 	FrostivusGameMode.__index = FrostivusGameMode
 
@@ -1095,7 +1095,7 @@ function FrostivusGameMode:_finishRound( bAwardGold, bAwardFrostyPoints )
 		msg  = msg .. "========================================\n"
 		Msg( msg )
 		if io then
-			local logFile = io.open( "frostivus.log", "a+" )
+			local logFile = io.open( "frostivus_plus.log", "a+" )
 			if logFile then
 				logFile:write( msg )
 				logFile:close()
