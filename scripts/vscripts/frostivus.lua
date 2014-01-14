@@ -143,6 +143,7 @@ function FrostivusGameMode:InitGameMode()
 
 	self._scriptBind:SetRemoveIllusionsOnDeath( true )
 
+	ListenToGameEvent( "player_connect_full", Dynamic_Wrap(FrostivusGameMode, 'OnPlayerJoin'), self)
 	ListenToGameEvent( "entity_killed", Dynamic_Wrap( FrostivusGameMode, 'OnEntityKilled' ), self )
 	ListenToGameEvent( "npc_spawned", Dynamic_Wrap( FrostivusGameMode, 'OnNPCSpawned' ), self )
 	ListenToGameEvent( "dota_item_picked_up", Dynamic_Wrap( FrostivusGameMode, 'OnItemPickedUp' ), self )
@@ -170,6 +171,15 @@ function FrostivusGameMode:InitGameMode()
 	for i=1,#enemyTowers do
 		enemyTowers[i]:AddNewModifier( enemyTowers[i], nil, "modifier_invulnerable", {} )
 	end
+end
+
+-- Auto assigns a player when they connect
+function FrostivusGameMode:OnPlayerJoin(keys)
+    -- Grab the entity index of this player
+    local entIndex = keys.index+1
+    local ply = EntIndexToHScript(entIndex)
+    ply:SetTeam(DOTA_TEAM_GOODGUYS)
+    ply:__KeyValueFromInt('teamnumber', DOTA_TEAM_GOODGUYS) --Ash47 test, trying to put more than 5 on a team
 end
 
 function FrostivusGameMode:_InitCVars()

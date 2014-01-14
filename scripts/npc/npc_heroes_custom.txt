@@ -4,39 +4,6 @@
 "DOTAHeroes"
 {
 	//=================================================================================================================
-	// HERO: Templar Assassin
-	//=================================================================================================================
-	"npc_dota_hero_templar_assassin_holdout"
-	{
-		"override_hero"				"npc_dota_hero_templar_assassin"
-		"Ability1"					"templar_assassin_refraction_holdout"		// Ability 1
-		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
-	}	
-
-	//=================================================================================================================
-	// HERO: Keeper of the Light
-	//=================================================================================================================
-	"npc_dota_hero_keeper_of_the_light_holdout"
-	{
-		"override_hero"			"npc_dota_hero_keeper_of_the_light"
-		"Ability2"				"keeper_of_the_light_mana_overload"
-		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
-	}
-	
-	//=================================================================================================================
-	// HERO: Zuus
-	//=================================================================================================================
-	"npc_dota_hero_zuus_holdout"
-	{
-		"override_hero"			"npc_dota_hero_zuus"
-		"Ability1"				"holdout_arc_lightning"
-		"Ability2"				"holdout_lightning_bolt"
-		"Ability3"				"holdout_static_field"
-		"Ability4"				"zuus_thundergods_vengeance"
-		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
-	}
-	
-	//=================================================================================================================
 	// HERO: Axe
 	//=================================================================================================================
 	"npc_dota_hero_axe_holdout"
@@ -49,16 +16,16 @@
 		"Ability4"				"holdout_culling_blade"
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
-
+	
 	//=================================================================================================================
-	// HERO: Windrunner
+	// HERO: Crystal Maiden
 	//=================================================================================================================
-	"npc_dota_hero_windrunner_holdout"
+	"npc_dota_hero_crystal_maiden_holdout"
 	{
-		"override_hero"			"npc_dota_hero_windrunner"
-		"Ability1"				"holdout_shackleshot"
-		"Ability3"				"holdout_windrun"
-		"Ability4"				"holdout_focusfire"
+		"override_hero"				"npc_dota_hero_crystal_maiden"
+		
+		"Ability3"					"holdout_arcane_aura"				
+
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
 	
@@ -67,78 +34,12 @@
 	//=================================================================================================================
 	"npc_dota_hero_dark_seer_holdout"
 	{
-		"override_hero"			"npc_dota_hero_dark_seer"
-		"Ability4"				"dark_seer_wall_of_discord"
+		"override_hero"				"npc_dota_hero_dark_seer"
+		"Ability4"					"dark_seer_wall_of_discord"
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+		"MovementSpeed"				"285"									// Speed.
 	}
 	
-	//=================================================================================================================
-	// HERO: Magnus
-	//=================================================================================================================
-	"npc_dota_hero_magnataur_holdout"
-	{
-		"override_hero"			"npc_dota_hero_magnataur"
-		"Ability3"				"magnataur_skewer_holdout"
-		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
-	}
-
-	//=================================================================================================================
-	// HERO: Omniknight
-	//=================================================================================================================
-	"npc_dota_hero_omniknight_holdout"
-	{
-		"override_hero"			"npc_dota_hero_omniknight"
-		"Ability3"				"holdout_degen_aura"
-		"Ability4"				"holdout_guardian_angel"
-		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
-
-	}
-
-	//=================================================================================================================
-	// HERO: Shadow Shaman
-	//=================================================================================================================
-	"npc_dota_hero_shadow_shaman_holdout"
-	{
-		"override_hero"			"npc_dota_hero_shadow_shaman"
-		"Ability1"				"holdout_ether_shock"
-		"Ability2"				"holdout_voodoo"
-		"Ability3"				"holdout_shackles"
-		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
-	}
-
-	//=================================================================================================================
-	// HERO: Mirana
-	//=================================================================================================================
-	"npc_dota_hero_mirana_holdout"
-	{
-		"override_hero"			"npc_dota_hero_mirana"
-		"Ability2"				"holdout_mirana_arrow"
-		"Ability4"				"mirana_moonfall"
-		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
-	}
-
-	//=================================================================================================================
-	// HERO: Shadow Fiend
-	//=================================================================================================================
-	"npc_dota_hero_shadow_fiend_holdout"
-	{
-		"override_hero"			"npc_dota_hero_nevermore"
-		"Ability1"				"holdout_shadowraze1"
-		"Ability2"				"holdout_shadowraze2"
-		"Ability3"				"holdout_shadowraze3"
-		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
-	}
-
-	//=================================================================================================================
-	// HERO: Tidehunter
-	//=================================================================================================================
-	"npc_dota_hero_tidehunter_holdout"
-	{
-		"override_hero"			"npc_dota_hero_tidehunter"
-		"Ability1"				"holdout_gush"
-		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
-	}
-
 	//=================================================================================================================
 	// HERO: Drow Ranger
 	//=================================================================================================================
@@ -150,7 +51,7 @@
 		"Ability4"				"holdout_marksmanship"
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
-
+	
 	//=================================================================================================================
 	// HERO: Juggernaut
 	//=================================================================================================================
@@ -163,34 +64,51 @@
 	}
 
 	//=================================================================================================================
-	// HERO: Sven
+	// HERO: Keeper of the Light
 	//=================================================================================================================
-	"npc_dota_hero_sven_holdout"
+	"npc_dota_hero_keeper_of_the_light_holdout"
 	{
-		"override_hero"			"npc_dota_hero_sven"
-		"Ability1"				"holdout_storm_bolt"
-		"Ability3"				"holdout_warcry"
-		"Ability4"				"holdout_gods_strength"
+		"override_hero"			"npc_dota_hero_keeper_of_the_light"
+		"Ability2"				"keeper_of_the_light_mana_overload"
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
-	}
-
+	}	
+	
 	//=================================================================================================================
-	// HERO: Venomancer
+	// HERO: Leigon Commander
 	//=================================================================================================================
-	"npc_dota_hero_venomancer_holdout"
+	"npc_dota_hero_legion_commander_holdout"
 	{
-		"override_hero"			"npc_dota_hero_venomancer"
-		// Abilities
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityLayout"				"5"
-
-		"Ability4"					"holdout_scourge_ward"					// Ability 3
-		"Ability5"					"holdout_poison_nova"					// Ability 4
-		"Ability6"					"attribute_bonus"						// Ability 6 - Bonuses.
+		"override_hero"			"npc_dota_hero_legion_commander"
+		
+		"Ability4"					"holdout_gladiators_unite"									
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
+	
+	//=================================================================================================================
+	// HERO: Lina
+	//=================================================================================================================
+	"npc_dota_hero_lina_holdout"
+	{
+		"override_hero"				"npc_dota_hero_lina"
+		
+		"Ability1"					"holdout_dragon_slave"
+		"Ability2"					"holdout_light_strike_array"
+		"Ability3"					"holdout_fiery_soul"				
 
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	
+	//=================================================================================================================
+	// HERO: Magnus
+	//=================================================================================================================
+	"npc_dota_hero_magnataur_holdout"
+	{
+		"override_hero"			"npc_dota_hero_magnataur"
+		"Ability3"				"magnataur_skewer_holdout"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	
 	//=================================================================================================================
 	// HERO: Magnus
 	//=================================================================================================================
@@ -210,45 +128,45 @@
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
-
+	
 	//=================================================================================================================
-	// HERO: Leigon Commander
+	// HERO: Mirana
 	//=================================================================================================================
-	"npc_dota_hero_legion_commander_holdout"
+	"npc_dota_hero_mirana_holdout"
 	{
-		"override_hero"			"npc_dota_hero_legion_commander"
-		
-		"Ability4"					"holdout_gladiators_unite"									
-
+		"override_hero"			"npc_dota_hero_mirana"
+		"Ability2"				"holdout_mirana_arrow"
+		"Ability4"				"mirana_moonfall"
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
 
 	//=================================================================================================================
-	// HERO: Lina
+	// HERO: Omniknight
 	//=================================================================================================================
-	"npc_dota_hero_lina_holdout"
+	"npc_dota_hero_omniknight_holdout"
 	{
-		"override_hero"				"npc_dota_hero_lina"
-		
-		"Ability1"					"holdout_dragon_slave"
-		"Ability2"					"holdout_light_strike_array"
-		"Ability3"					"holdout_fiery_soul"				
-
+		"override_hero"			"npc_dota_hero_omniknight"
+		"Ability3"				"holdout_degen_aura"
+		"Ability4"				"holdout_guardian_angel"
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
-	}
 
+	}
+	
 	//=================================================================================================================
-	// HERO: Crystal Maiden
+	// HERO: Queen of Pain
 	//=================================================================================================================
-	"npc_dota_hero_crystal_maiden_holdout"
+	"npc_dota_hero_queen_of_pain_holdout"
 	{
-		"override_hero"				"npc_dota_hero_crystal_maiden"
-		
-		"Ability3"					"holdout_arcane_aura"				
+		"override_hero"				"npc_dota_hero_queenofpain"
 
-		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+		"Ability1"					"holdout_queenofpain_shadow_strike"
+		"Ability2"					"holdout_qop_blink"
+		"Ability3"					"holdout_scream_of_pain"
+		"Ability4"					"holdout_sonic_wave"
+
+		"VisionNighttimeRange"		"1800"
 	}
-
+	
 	//=================================================================================================================
 	// HERO: Sand King
 	//=================================================================================================================
@@ -261,6 +179,29 @@
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
 
+	//=================================================================================================================
+	// HERO: Shadow Shaman
+	//=================================================================================================================
+	"npc_dota_hero_shadow_shaman_holdout"
+	{
+		"override_hero"			"npc_dota_hero_shadow_shaman"
+		"Ability1"				"holdout_ether_shock"
+		"Ability2"				"holdout_voodoo"
+		"Ability3"				"holdout_shackles"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+
+	//=================================================================================================================
+	// HERO: Shadow Fiend
+	//=================================================================================================================
+	"npc_dota_hero_shadow_fiend_holdout"
+	{
+		"override_hero"			"npc_dota_hero_nevermore"
+		"Ability1"				"holdout_shadowraze1"
+		"Ability2"				"holdout_shadowraze2"
+		"Ability3"				"holdout_shadowraze3"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
 	
 	//=================================================================================================================
 	// HERO: Storm Spirit
@@ -276,20 +217,66 @@
 
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
-
+	
 	//=================================================================================================================
-	// HERO: Queen of Pain
+	// HERO: Sven
 	//=================================================================================================================
-	"npc_dota_hero_queen_of_pain_holdout"
+	"npc_dota_hero_sven_holdout"
 	{
-		"override_hero"				"npc_dota_hero_queenofpain"
+		"override_hero"			"npc_dota_hero_sven"
+		"Ability1"				"holdout_storm_bolt"
+		"Ability3"				"holdout_warcry"
+		"Ability4"				"holdout_gods_strength"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	
+	//=================================================================================================================
+	// HERO: Templar Assassin
+	//=================================================================================================================
+	"npc_dota_hero_templar_assassin_holdout"
+	{
+		"override_hero"				"npc_dota_hero_templar_assassin"
+		"Ability1"					"templar_assassin_refraction_holdout"		// Ability 1
+		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
+	}	
 
-		"Ability1"					"holdout_queenofpain_shadow_strike"
-		"Ability2"					"holdout_qop_blink"
-		"Ability3"					"holdout_scream_of_pain"
-		"Ability4"					"holdout_sonic_wave"
+	//=================================================================================================================
+	// HERO: Tidehunter
+	//=================================================================================================================
+	"npc_dota_hero_tidehunter_holdout"
+	{
+		"override_hero"			"npc_dota_hero_tidehunter"
+		"Ability1"				"holdout_gush"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	
+	//=================================================================================================================
+	// HERO: Venomancer
+	//=================================================================================================================
+	"npc_dota_hero_venomancer_holdout"
+	{
+		"override_hero"			"npc_dota_hero_venomancer"
+		// Abilities
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityLayout"				"5"
 
-		"VisionNighttimeRange"		"1800"
+		"Ability4"					"holdout_scourge_ward"					// Ability 3
+		"Ability5"					"holdout_poison_nova"					// Ability 4
+		"Ability6"					"attribute_bonus"						// Ability 6 - Bonuses.
+
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	
+	//=================================================================================================================
+	// HERO: Windrunner
+	//=================================================================================================================
+	"npc_dota_hero_windrunner_holdout"
+	{
+		"override_hero"			"npc_dota_hero_windrunner"
+		"Ability1"				"holdout_shackleshot"
+		"Ability3"				"holdout_windrun"
+		"Ability4"				"holdout_focusfire"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
 
 	//=================================================================================================================
@@ -301,6 +288,19 @@
 		"Ability1"				"holdout_paralyzing_cask"
 		"Ability2"				"holdout_voodoo_restoration"
 		"Ability4"				"holdout_death_ward"
+		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
+	}
+	
+	//=================================================================================================================
+	// HERO: Zuus
+	//=================================================================================================================
+	"npc_dota_hero_zuus_holdout"
+	{
+		"override_hero"			"npc_dota_hero_zuus"
+		"Ability1"				"holdout_arc_lightning"
+		"Ability2"				"holdout_lightning_bolt"
+		"Ability3"				"holdout_static_field"
+		"Ability4"				"zuus_thundergods_vengeance"
 		"VisionNighttimeRange"		"1800"									// Range of vision at night time.
 	}
 }
