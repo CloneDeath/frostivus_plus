@@ -1,4 +1,8 @@
 Gyro W - Pointless, replace it completely
 Invoker could use a little boost
-Riki is so shitty, fix him
 Lone Druid's Bear does not heal at end of round
+Courier not destroyed between waves
+Webs not destroyed between waves
+Wraith King Ulti is broke
+Boost Undying tombstone zambies
+Change tooltip text for all heroes who have been changed

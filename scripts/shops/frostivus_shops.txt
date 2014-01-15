@@ -12,7 +12,7 @@
 		"item"		"item_courier"
 		"item"		"item_flying_courier"
 		"item"		"item_smoke_of_deceit"
-		
+		"item"		"item_aegis"
 	}
 
 	"attributes"

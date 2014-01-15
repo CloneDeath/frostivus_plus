@@ -208,8 +208,11 @@ function FrostivusGameMode:_RestartGame()
 		UTIL_RemoveImmediate( item )
 	end
 
-	for _, ward in ipairs( Entities:FindAllByClassname( "npc_dota_witch_doctor_death_ward" ) ) do
-		UTIL_RemoveImmediate( ward )
+	ClassesToRemove = { "npc_dota_witch_doctor_death_ward", "npc_dota_broodmother_web", "npc_dota_courier" }
+	for _, classname in ipairs( ClassesToRemove ) do
+		for _, entity in ipairs( Entities:FindAllByClassname( classname ) ) do
+			UTIL_RemoveImmediate( entity )
+		end
 	end
 
 

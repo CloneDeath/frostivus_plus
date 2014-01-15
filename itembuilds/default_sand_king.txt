@@ -35,6 +35,7 @@
 			"item"		"item_shivas_guard"
 			"item"		"item_black_king_bar"
 			"item"		"item_heart"
+			"item"		"item_radiance"
 		}
 	}
 }
