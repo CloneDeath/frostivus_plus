@@ -154,16 +154,20 @@ function FrostivusGameMode:InitGameMode()
 
 	GameRules:SetHeroRespawnEnabled( false )
 	GameRules:SetUseUniversalShopMode( true )
-	GameRules:SetHeroSelectionTime( 30.0 )
+	GameRules:SetHeroSelectionTime( 120.0 )
 	GameRules:SetPreGameTime( 60.0 )
 	GameRules:SetPostGameTime( 60.0 )
 	GameRules:SetTreeRegrowTime( 60.0 )
 	GameRules:SetHeroMinimapIconSize( 400 )
 	GameRules:SetCreepMinimapIconScale( 0.7 )
 	GameRules:SetRuneMinimapIconScale( 0.7 )
+	GameRules:SetRuneSpawnTime( 30 )
 
-	GameRules:SetTimeOfDay( 0.75 )
-	Convars:SetBool( "dota_force_night", true )
+	GameRules:SetTimeOfDay( 0.0 )
+	Convars:SetBool( "dota_wait_for_players_to_load", false )
+	Convars:SetFloat( "dota_wait_for_players_to_load_count", 10 )
+	Convars:SetFloat( "dota_wait_for_players_to_load_timeout", 10 )
+	Convars:SetBool( "dota_force_night", false )
 	Convars:SetBool( "dota_suppress_invalid_orders", true )
 
 	-- Make the enemy towers invulnerable
@@ -227,8 +231,8 @@ function FrostivusGameMode:_RestartGame()
 
 	-- Reset values
 	self:_SetInitialValues()
-
 	GameRules:ResetDefeated()
+	GameRules:SetTimeOfDay( 0.0 )
 
 	-- Back to hero picker
 	GameRules:ResetToHeroSelection()
