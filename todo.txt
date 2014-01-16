@@ -5,4 +5,3 @@ Courier not destroyed between waves
 Webs not destroyed between waves
 Wraith King Ulti is broke
 Boost Undying tombstone zambies
-Change tooltip text for all heroes who have been changed
