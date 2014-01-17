@@ -1,0 +1,244 @@
+"Round2" // Corpselords, Volatile Zombies
+{
+	"round_number"				"2"
+	"round_quest_title"			"#DOTA_Holdout_Round_Zombies_Quest_Title"
+	"round_title"				"#DOTA_Holdout_Round_Zombies_Title"
+	"MaxGold"					"6150"
+	"BagCount"					"40"
+	"BagVariance"				"10"
+	"FixedXP"					"3500"
+	
+	// Stage 1 ================================================
+	"UnitZombie_1a"
+	{
+		"NPCName"				"npc_dota_creature_basic_zombie"
+		"TotalUnitsToSpawn"		"18"
+		"UnitsPerSpawn"			"6"
+		"SpawnInterval"			"8"
+	}
+	
+	"UnitZombieExploding"
+	{
+		"GroupWithUnit"			"UnitZombie_1a"
+		
+		"NPCName"				"npc_dota_creature_basic_zombie_exploding"
+		"TotalUnitsToSpawn"		"3"
+		"UnitsPerSpawn"			"1"
+	}
+	
+	"UnitZombie_1b"
+	{
+		"NPCName"				"npc_dota_creature_basic_zombie"
+		"TotalUnitsToSpawn"		"18"
+		"UnitsPerSpawn"			"6"
+		"SpawnInterval"			"8"
+	}
+	
+	"UnitZombieExploding"
+	{
+		"GroupWithUnit"			"UnitZombie_1b"
+		
+		"NPCName"				"npc_dota_creature_basic_zombie_exploding"
+		"TotalUnitsToSpawn"		"3"
+		"UnitsPerSpawn"			"1"
+	}
+	
+	// Stage 2 ================================================
+	"UnitZombie_2a"
+	{
+		"WaitForUnit"			"UnitZombie_1a"
+		"WaitForTime"			"15"
+		
+		"NPCName"				"npc_dota_creature_basic_zombie"
+		"TotalUnitsToSpawn"		"24"
+		"UnitsPerSpawn"			"8"
+		"SpawnInterval"			"8"
+	}
+	
+	"UnitZombieCorpseLord_2a"
+	{
+		"GroupWithUnit"			"UnitZombie_2a"
+		
+		"NPCName"				"npc_dota_creature_corpselord"
+		"TotalUnitsToSpawn"		"3"
+		"UnitsPerSpawn"			"1"
+	}
+	
+	"UnitZombieExploding_2a"
+	{
+		"GroupWithUnit"			"UnitZombie_2a"
+		
+		"NPCName"				"npc_dota_creature_basic_zombie_exploding"
+		"TotalUnitsToSpawn"		"3"
+		"UnitsPerSpawn"			"1"
+	}
+	
+	// Stage 3 ================================================
+
+	"UnitZombie_3a"
+	{
+		"WaitForUnit"			"UnitZombie_2a"
+		"WaitForTime"			"10"
+		
+		"NPCName"				"npc_dota_creature_basic_zombie"
+		"TotalUnitsToSpawn"		"24"
+		"UnitsPerSpawn"			"8"
+		"SpawnInterval"			"6"
+	}
+	
+	"UnitZombie_3b"
+	{
+		"WaitForUnit"			"UnitZombie_2a"			
+		"WaitForTime"			"10"
+		
+		"NPCName"				"npc_dota_creature_basic_zombie"
+		"TotalUnitsToSpawn"		"24"
+		"UnitsPerSpawn"			"8"
+		"SpawnInterval"			"6"
+	}
+	
+	// Stage 5 ================================================
+	"UnitZombie_5a"
+	{
+		"WaitForUnit"			"UnitZombie_3a"
+		"WaitForTime"			"15"
+		
+		"NPCName"				"npc_dota_creature_basic_zombie"
+		"TotalUnitsToSpawn"		"3"
+		"UnitsPerSpawn"			"3"
+		//"SpawnInterval"			"25"
+		
+		"SpawnerName"			"spawner1"
+		"Waypoint"				"path_invader1_1"
+	}
+	
+	"UnitZombieCorpseLord_5a"
+	{
+		"GroupWithUnit"			"UnitZombie_5a"
+		
+		"NPCName"				"npc_dota_creature_corpselord"
+		"TotalUnitsToSpawn"		"1"
+		"UnitsPerSpawn"			"1"
+		
+		"SpawnerName"			"spawner1"
+		"Waypoint"				"path_invader1_1"
+	}
+	
+	"UnitZombie_5b"
+	{
+		"WaitForUnit"			"UnitZombie_3a"
+		"WaitForTime"			"15"
+		
+		"NPCName"				"npc_dota_creature_basic_zombie"
+		"TotalUnitsToSpawn"		"3"
+		"UnitsPerSpawn"			"3"
+		
+		"SpawnerName"			"spawner2"
+		"Waypoint"				"path_invader2_1"
+	}
+	
+	"UnitZombieCorpseLord_5b"
+	{
+		"GroupWithUnit"			"UnitZombie_5b"
+		
+		"NPCName"				"npc_dota_creature_corpselord"
+		"TotalUnitsToSpawn"		"1"
+		"UnitsPerSpawn"			"1"
+		
+		"SpawnerName"			"spawner2"
+		"Waypoint"				"path_invader2_1"
+	}
+	
+	"UnitZombie_5c"
+	{
+		"WaitForUnit"			"UnitZombie_3a"
+		"WaitForTime"			"15"
+		
+		"NPCName"				"npc_dota_creature_basic_zombie"
+		"TotalUnitsToSpawn"		"3"
+		"UnitsPerSpawn"			"3"
+		
+		"SpawnerName"			"spawner3"
+		"Waypoint"				"path_invader3_1"
+	}
+	
+	"UnitZombieCorpseLord_5c"
+	{
+		"GroupWithUnit"			"UnitZombie_5c"
+		
+		"NPCName"				"npc_dota_creature_corpselord"
+		"TotalUnitsToSpawn"		"1"
+		"UnitsPerSpawn"			"1"
+		
+		"SpawnerName"			"spawner3"
+		"Waypoint"				"path_invader3_1"
+	}
+	
+	"UnitZombie_5d"
+	{
+		"WaitForUnit"			"UnitZombie_3a"
+		"WaitForTime"			"15"
+		
+		"NPCName"				"npc_dota_creature_basic_zombie"
+		"TotalUnitsToSpawn"		"3"
+		"UnitsPerSpawn"			"3"
+		
+		"SpawnerName"			"spawner4"
+		"Waypoint"				"path_invader4_1"
+	}
+	
+	"UnitZombieCorpseLord_5d"
+	{
+		"GroupWithUnit"			"UnitZombie_5d"
+		
+		"NPCName"				"npc_dota_creature_corpselord"
+		"TotalUnitsToSpawn"		"1"
+		"UnitsPerSpawn"			"1"
+		
+		"SpawnerName"			"spawner4"
+		"Waypoint"				"path_invader4_1"
+	}
+	
+	// Stage Finale ================================================
+	"UnitZombieSupport_Finale"
+	{
+		"WaitForUnit"			"UnitZombie_5a"
+		"WaitForTime"			"15"
+		
+		"NPCName"				"npc_dota_creature_basic_zombie"
+		"TotalUnitsToSpawn"		"20"
+		"UnitsPerSpawn"			"10"
+		"SpawnInterval"			"8"
+	}
+	
+	"UnitZombieCorpseLord_Finale"
+	{
+		"WaitForUnit"			"UnitZombie_5a"
+		"GroupWithUnit"			"UnitZombieSupport_Finale"
+		
+		"NPCName"				"npc_dota_creature_corpselord"
+		"TotalUnitsToSpawn"		"2"
+		"UnitsPerSpawn"			"1"
+	}
+	
+	"UnitZombieSupport_Finale_b"
+	{
+		"WaitForUnit"			"UnitZombie_5a"
+		"WaitForTime"			"15"
+		
+		"NPCName"				"npc_dota_creature_basic_zombie"
+		"TotalUnitsToSpawn"		"20"
+		"UnitsPerSpawn"			"10"
+		"SpawnInterval"			"8"
+	}
+	
+	"UnitZombieCorpseLord_Finale_b"
+	{
+		"WaitForUnit"			"UnitZombie_5a"
+		"GroupWithUnit"			"UnitZombieSupport_Finale_b"
+		
+		"NPCName"				"npc_dota_creature_corpselord"
+		"TotalUnitsToSpawn"		"2"
+		"UnitsPerSpawn"			"1"
+	}
+}

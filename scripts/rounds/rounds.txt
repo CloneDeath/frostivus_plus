@@ -1,0 +1,16 @@
+"rounds"
+{
+	"round1"		"round1_kobolds.txt"
+	"round2"		"round2_zombies.txt"
+	"round3"		"round3_ogres.txt"
+	"round4"		"round4_slar.txt"
+	"round5"		"round5_trees.txt"
+	"round6"		"round6_spider.txt"
+	"round7"		"round7_roshrac.txt"
+	"round8"		"round8_splitters.txt"
+	"round9"		"round9_bears.txt"
+	"round10"		"round10_pudge.txt"
+	"round11"		"round11_gyrocopter.txt"
+	"round12"		"round12_lich.txt"
+	"round13"		"round13_wraith.txt"
+}

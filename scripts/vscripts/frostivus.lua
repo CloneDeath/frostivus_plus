@@ -85,7 +85,9 @@ function FrostivusGameMode:_SetInitialValues()
 	self._scriptBind:BeginThink( "FrostivusThink", Dynamic_Wrap( FrostivusGameMode, 'Think' ), 0.25 )
 
 	self.keyValues = LoadKeyValues( "scripts/maps/" .. GetMapName() .. ".txt" )
-	self:_readGameKeyValues( self.keyValues)		
+	self:_readGameKeyValues( self.keyValues)
+	
+	self:_readRoundFiles( LoadKeyValues( "scripts/rounds/rounds.txt" ) )
 end
 
 -- Called from C++ to Initialize
@@ -357,7 +359,7 @@ function FrostivusGameMode:SkipToRound( nRoundNumber )
 
 	-- reload round data from disk
 	self.keyValues = LoadKeyValues( "scripts/maps/" .. GetMapName() .. ".txt" )
-	self:_readGameKeyValues( self.keyValues)
+	self:_readGameKeyValues( self.keyValues )
 	-- going back or restarting the current round, revert heroes
 	self:_revertHeroesToRoundNumber( nRoundNumber )
 	
@@ -794,10 +796,9 @@ function FrostivusGameMode:_initializeNextRound()
 		self.vPlayerHeroData[i].nRevivesDone = 0
 	end
 
-	local pszRoundName = "Round" .. tostring( self.nRoundNumber )
 	local pszRoundQuestTitle = "DOTA_Quest_Holdout_Round"
 	self.roundTitle = ""
-	local kvUnitsData = self.keyValues[pszRoundName]
+	local kvUnitsData = self:GetRoundData(self.nRoundNumber)
 	if not kvUnitsData then
 		return
 	end
@@ -847,7 +848,7 @@ function FrostivusGameMode:_initializeNextRound()
 
 	if self.nWaveEnemyCount > 0 then
 		local hSpawnTable = {
-			name = pszRoundName,
+			name = "Round" .. tostring( self.nRoundNumber ),
 			text = pszRoundQuestTitle,
 			--subtext = "#DOTA_Quest_Holdout_Round_Subtext"
 			show_progress_bar = true,
@@ -855,7 +856,6 @@ function FrostivusGameMode:_initializeNextRound()
 		}
 
 		local function onQuestSpawn( self, quest )
-			self.hStatusQuest = quest
 			quest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_ROUND, self.nRoundNumber )
 			quest:SetTextReplaceValue( QUEST_TEXT_REPLACE_VALUE_TARGET_VALUE, self.nWaveEnemyCount )
 			quest:SetTextReplaceString( self:_getDifficultyString() )
@@ -872,6 +872,21 @@ function FrostivusGameMode:_initializeNextRound()
 
 	if kvUnitsData.StartupScript then
 		self[kvUnitsData.StartupScript](self)
+	end
+end
+
+function FrostivusGameMode:GetRoundData( round_number )
+	local found = {}
+	for k, v in pairs( self.rounds ) do
+		if v.round_number == round_number then
+			table.insert(found, v);
+		end
+	end
+	
+	if #found > 0 then
+		return found[ RandomInt( 1, #found ) ];
+	else
+		return nil;
 	end
 end
 
@@ -1683,19 +1698,7 @@ function FrostivusGameMode:_readGameKeyValues( keyValues )
 	self.flPrepTimeBetweenRounds = tonumber( self.keyValues.PrepTimeBetweenRounds or 0 )
 	self.flItemExpireTime = tonumber( self.keyValues.ItemExpireTime or 10.0 )
 
-	while true do
-		local pszRoundName = "Round" .. ( self.nNumberOfRounds + 1 )
-		local roundData = keyValues[ pszRoundName ]
-		if not roundData then
-			break
-		end
-		for keyName, sk in pairs( roundData ) do
-			if  type(sk) == "table" and sk.NPCName then
-				PrecacheFrostivusUnit( sk.NPCName )
-			end
-		end
-		self.nNumberOfRounds = self.nNumberOfRounds + 1
-	end
+	
 
 	self.vItemDropData = {}
 	local itemDropsKey = keyValues["ItemDrops"]
@@ -1808,6 +1811,25 @@ function FrostivusGameMode:_readRoundQuestKeyValues( kvQuest )
 	SpawnEntityFromTable( questEntType, questSpawnInfo, self, onQuestSpawn, nil )
 	return roundQuest
 end
+
+function FrostivusGameMode:_readRoundFiles( kvRoundInfo )
+	self.rounds = {}
+	for k, v in pairs( kvRoundInfo ) do
+		self.rounds[k] = LoadKeyValues( "scripts/rounds/" .. v )
+		if (self.rounds[k].round_number > self.nNumberOfRounds) then
+			self.nNumberOfRounds = self.rounds[k].round_number
+		end
+	end
+	
+	for pszRoundName, roundData in pairs ( self.rounds ) do
+		for keyName, sk in pairs( roundData ) do
+			if type(sk) == "table" and sk.NPCName then
+				PrecacheFrostivusUnit( sk.NPCName )
+			end
+		end
+	end
+end
+
 
 function printTable( t, indent )
 	for k,v in pairs( t ) do

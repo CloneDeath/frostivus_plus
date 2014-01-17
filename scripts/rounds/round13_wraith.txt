@@ -1,0 +1,24 @@
+"Round13" // Wraith
+{
+	"round_number"				"13"
+	"round_quest_title"			"#DOTA_Holdout_Round_Wraith_Quest_Title"
+	"round_title"				"#DOTA_Holdout_Round_Wraith_Title"
+	"MaxGold"					"1500"
+	"BagCount"					"1"
+	"BagVariance"				"0"
+	"FixedXP"					"550"
+	"StartupScript"				"WraithKingRoundStart"
+
+	// Stage 1 ================================================
+	"UnitWraithKing"
+	{
+		"WaitForScriptVariable"	"bWraithKingSpawn"
+		"NPCName"				"npc_dota_creature_boss_skeleton_king_1"
+		"TotalUnitsToSpawn"		"1"
+		"UnitsPerSpawn"			"1"
+		"DontGiveGoal"			"1"
+		"DontOffsetSpawn"		"1"
+		"FaceSouth"				"1"
+		"SpawnerName"			"wraith_spawn_location"
+	}
+}

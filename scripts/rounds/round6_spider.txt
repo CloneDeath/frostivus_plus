@@ -1,0 +1,19 @@
+"Round6" // Broodqueen
+{
+	"round_number"				"6"
+	"round_quest_title"			"#DOTA_Holdout_Round_Broodking_Quest_Title"
+	"round_title"				"#DOTA_Holdout_Round_Broodking_Title"
+	"MaxGold"					"0" // 8300 from gold fountain ability
+	"BagCount"					"0"
+	"BagVariance"				"0"
+	"FixedXP"					"250"
+
+	// Stage 1 ================================================
+	"UnitMelee_1"
+	{
+		"NPCName"				"npc_dota_creature_broodking"
+		"TotalUnitsToSpawn"		"1"
+		"UnitsPerSpawn"			"1"
+		"DontGiveGoal"    		"1"
+	}
+}

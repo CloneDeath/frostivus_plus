@@ -5,3 +5,6 @@ Courier not destroyed between waves
 Webs not destroyed between waves
 Wraith King Ulti is broke
 Boost Undying tombstone zambies
+buff clinkz
+double riki mana consumption
+Luna's Q is useless

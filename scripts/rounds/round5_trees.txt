@@ -1,0 +1,47 @@
+"Round5" // Trees
+{
+	"round_number"				"5"
+	"round_quest_title"			"#DOTA_Holdout_Round_Trees_Quest_Title"
+	"round_title"				"#DOTA_Holdout_Round_Trees_Title"
+	"MaxGold"					"5700" //2000g from gold fountain ability (king_treant)
+	"BagCount"					"15"
+	"BagVariance"				"50"
+	"FixedXP"					"6500"
+
+	"Unit1"
+	{
+		"NPCName"				"npc_dota_creature_forest_prophet"
+		"TotalUnitsToSpawn"		"5"
+		"UnitsPerSpawn"			"1"
+		"SpawnInterval"			"28"
+	}	
+	"Unit2"
+	{
+		"NPCName"				"npc_dota_creature_forest_prophet"
+		"TotalUnitsToSpawn"		"5"
+		"UnitsPerSpawn"			"1"
+		"SpawnInterval"			"28"
+	}	
+
+	"Unit3"
+	{
+		"NPCName"				"npc_dota_creature_forest_prophet"
+		"TotalUnitsToSpawn"		"5"
+		"UnitsPerSpawn"			"1"
+		"SpawnInterval"			"28"
+	}	
+	"Unit4"
+	{
+		"NPCName"				"npc_dota_creature_forest_prophet"
+		"TotalUnitsToSpawn"		"5"
+		"UnitsPerSpawn"			"1"
+		"SpawnInterval"			"28"
+	}	
+	"Unit5"
+	{
+		"NPCName"				"npc_dota_creature_king_treant"
+		"TotalUnitsToSpawn"		"5"
+		"UnitsPerSpawn"			"1"
+		"SpawnInterval"			"20"
+	}	
+}

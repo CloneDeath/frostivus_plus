@@ -1,0 +1,143 @@
+"Round9" // Bears!
+{
+	"round_number"				"9"
+	"round_quest_title"			"#DOTA_Holdout_Round_BearForceOne_Quest_Title"
+	"round_title"				"#DOTA_Holdout_Round_BearForceOne_Title"
+	"MaxGold"					"9900"
+	"BagCount"					"45"
+	"BagVariance"				"100"
+	"FixedXP"					"12000"
+
+	// Part 1
+	"Unit1"
+	{
+		"NPCName"				"npc_dota_creature_small_spirit_bear"
+		"TotalUnitsToSpawn"		"15"
+		"UnitsPerSpawn"			"3"
+		"SpawnInterval"			"12"
+	}
+	"Unit2"
+	{
+		"NPCName"				"npc_dota_creature_large_spirit_bear"
+		"TotalUnitsToSpawn"		"5"
+		"UnitsPerSpawn"			"1"
+		"GroupWithUnit"			"Unit1"
+	}	
+	"Unit3"
+	{
+		"NPCName"				"npc_dota_creature_small_spirit_bear"
+		"TotalUnitsToSpawn"		"15"
+		"UnitsPerSpawn"			"3"
+		"SpawnInterval"			"12"
+	}
+	"Unit4"
+	{
+		"NPCName"				"npc_dota_creature_large_spirit_bear"
+		"TotalUnitsToSpawn"		"10"
+		"UnitsPerSpawn"			"2"
+		"GroupWithUnit"			"Unit3"
+	}	
+	
+	// Part 2
+	"Unit5"
+	{
+		"NPCName"				"npc_dota_creature_small_spirit_bear"
+		"TotalUnitsToSpawn"		"8"
+		"UnitsPerSpawn"			"2"
+		"SpawnInterval"			"12"
+		"WaitForUnit"			"Unit1"
+	}
+	"Unit6"
+	{
+		"NPCName"				"npc_dota_creature_large_spirit_bear"
+		"TotalUnitsToSpawn"		"4"
+		"UnitsPerSpawn"			"1"
+		"GroupWithUnit"			"Unit5"
+	}
+	"Unit7"
+	{
+		"NPCName"				"npc_dota_creature_bear_chieftain"
+		"TotalUnitsToSpawn"		"4"
+		"UnitsPerSpawn"			"1"
+		"GroupWithUnit"			"Unit5"
+	}
+	"Unit8"
+	{
+		"NPCName"				"npc_dota_creature_small_spirit_bear"
+		"TotalUnitsToSpawn"		"8"
+		"UnitsPerSpawn"			"2"
+		"SpawnInterval"			"12"
+		"WaitForUnit"			"Unit1"
+	}
+	"Unit9"
+	{
+		"NPCName"				"npc_dota_creature_large_spirit_bear"
+		"TotalUnitsToSpawn"		"8"
+		"UnitsPerSpawn"			"2"
+		"GroupWithUnit"			"Unit8"
+	}
+	"Unit10"
+	{
+		"NPCName"				"npc_dota_creature_bear_chieftain"
+		"TotalUnitsToSpawn"		"4"
+		"UnitsPerSpawn"			"1"
+		"GroupWithUnit"			"Unit8"
+	}
+	
+	"UnitBigBear_2"
+	{	
+		"WaitForUnit"			"Unit1"
+		"WaitForTime"			"10"
+		
+		"NPCName"				"npc_dota_creature_big_bear"
+		"TotalUnitsToSpawn"		"1"
+		"UnitsPerSpawn"			"1"
+	}
+
+	// Part 3
+	"Unit11"
+	{
+		"NPCName"				"npc_dota_creature_small_spirit_bear"
+		"TotalUnitsToSpawn"		"4"
+		"UnitsPerSpawn"			"1"
+		"SpawnInterval"			"12"
+		"WaitForUnit"			"Unit5"
+	}	
+	"Unit12"
+	{
+		"NPCName"				"npc_dota_creature_large_spirit_bear"
+		"TotalUnitsToSpawn"		"4"
+		"UnitsPerSpawn"			"1"
+		"GroupWithUnit"			"Unit11"
+	}
+	"Unit13"
+	{
+		"NPCName"				"npc_dota_creature_bear_chieftain"
+		"TotalUnitsToSpawn"		"4"
+		"UnitsPerSpawn"			"1"
+		"GroupWithUnit"			"Unit11"
+	}	
+	"UnitBigBear_3"
+	{	
+		"WaitForUnit"			"Unit5"
+		
+		"NPCName"				"npc_dota_creature_big_bear"
+		"TotalUnitsToSpawn"		"1"
+		"UnitsPerSpawn"			"1"
+	}
+	"Unit15"
+	{
+		"NPCName"				"npc_dota_creature_small_spirit_bear"
+		"TotalUnitsToSpawn"		"5"
+		"UnitsPerSpawn"			"1"
+		"SpawnInterval"			"12"
+		"WaitForUnit"			"Unit5"
+	}	
+	"Unit16"
+	{
+		"NPCName"				"npc_dota_creature_large_spirit_bear"
+		"TotalUnitsToSpawn"		"5"
+		"UnitsPerSpawn"			"1"
+		"GroupWithUnit"			"Unit15"
+	}
+}

@@ -1,0 +1,99 @@
+"Round3" // Ogres
+{
+	"round_number"				"3"
+	"round_quest_title"			"#DOTA_Holdout_Round_Ogre_Quest_Title"
+	"round_title"				"#DOTA_Holdout_Round_Ogre_Title"
+	"MaxGold"					"6000" //600g from gold fountain ability
+	"BagCount"					"20"
+	"BagVariance"				"75"
+	"FixedXP"					"4000"
+	
+	// Stage 1 ================================================
+	"UnitMelee_1" // Duration 20s
+	{
+		"NPCName"				"npc_dota_creature_ogre_melee"
+		"TotalUnitsToSpawn"		"4"
+		"UnitsPerSpawn"			"4"
+		"SpawnInterval"			"20"
+	}
+	
+	"UnitRanged_1"
+	{
+		"GroupWithUnit"			"UnitMelee_1"
+		
+		"NPCName"				"npc_dota_creature_ogre_magi"
+		"TotalUnitsToSpawn"		"2"
+		"UnitsPerSpawn"			"2"
+	}
+	
+	// Stage 2 ================================================
+	"UnitMelee_2" // Duration 120s + 10s WaitForTime
+	{
+		"WaitForUnit"			"UnitMelee_1"
+		"WaitForTime"			"10"
+		
+		"NPCName"				"npc_dota_creature_ogre_melee"
+		"TotalUnitsToSpawn"		"12"
+		"UnitsPerSpawn"			"4"
+		"SpawnInterval"			"40"
+	}
+	
+	"UnitRanged_2"
+	{
+		"GroupWithUnit"			"UnitMelee_2"
+		
+		"NPCName"				"npc_dota_creature_ogre_magi"
+		"TotalUnitsToSpawn"		"6"
+		"UnitsPerSpawn"			"2"
+	}
+	
+	"UnitOgreTank_2"
+	{
+		"GroupWithUnit"			"UnitMelee_2"
+		
+		"NPCName"				"npc_dota_creature_ogre_tank"
+		"TotalUnitsToSpawn"		"3"
+		"UnitsPerSpawn"			"1"
+	}
+	
+	// Stage 2 Concurrent =====================================
+	"UnitMelee_2b" // Duration 120s + 10s
+	{
+		"WaitForUnit"			"UnitMelee_1"
+		"WaitForTime"			"10"
+		
+		"NPCName"				"npc_dota_creature_ogre_melee"
+		"TotalUnitsToSpawn"		"24"
+		"UnitsPerSpawn"			"4"
+		"SpawnInterval"			"20"
+	}
+	
+	"UnitRanged_2b"
+	{
+		"GroupWithUnit"			"UnitMelee_2b"
+		
+		"NPCName"				"npc_dota_creature_ogre_magi"
+		"TotalUnitsToSpawn"		"12"
+		"UnitsPerSpawn"			"2"
+	}
+	
+	"UnitMelee_2c" // Duration 100s + 30s
+	{
+		"WaitForUnit"			"UnitMelee_1"
+		"WaitForTime"			"30"
+		
+		"NPCName"				"npc_dota_creature_ogre_melee"
+		"TotalUnitsToSpawn"		"20"
+		"UnitsPerSpawn"			"4"
+		"SpawnInterval"			"20"
+	}
+	
+	"UnitRanged_2b"
+	{
+		"GroupWithUnit"			"UnitMelee_2c"
+		
+		"NPCName"				"npc_dota_creature_ogre_magi"
+		"TotalUnitsToSpawn"		"12"
+		"UnitsPerSpawn"			"2"
+	}
+}

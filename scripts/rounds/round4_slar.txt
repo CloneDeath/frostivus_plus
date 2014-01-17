@@ -1,0 +1,138 @@
+"Round4" // Slar*
+{
+	"round_number"				"4"
+	"round_quest_title"			"#DOTA_Holdout_Round_Slithereen_Quest_Title"
+	"round_title"				"#DOTA_Holdout_Round_Slithereen_Title"
+	"MaxGold"					"7150"
+	"BagCount"					"40"
+	"BagVariance"				"50"
+	"FixedXP"					"6500"
+
+	// Stage 1 ================================================
+	"UnitJumper_1"
+	{
+		"NPCName"				"npc_dota_creature_lesser_nightcrawler"
+		"TotalUnitsToSpawn"		"24"
+		"UnitsPerSpawn"			"6"
+		"SpawnInterval"			"16"
+	}
+	
+	"UnitStun_1a"
+	{
+		"GroupWithUnit"			"UnitJumper_1"
+		
+		"NPCName"				"npc_dota_creature_slithereen"
+		"TotalUnitsToSpawn"		"4"
+		"UnitsPerSpawn"			"1"
+	}
+	
+	"UnitJumper_1b"
+	{
+		"NPCName"				"npc_dota_creature_lesser_nightcrawler"
+		"TotalUnitsToSpawn"		"24"
+		"UnitsPerSpawn"			"6"
+		"SpawnInterval"			"16"
+	}
+	
+	"UnitStun_1b"
+	{
+		"GroupWithUnit"			"UnitJumper_1b"
+		
+		"NPCName"				"npc_dota_creature_slithereen"
+		"TotalUnitsToSpawn"		"4"
+		"UnitsPerSpawn"			"1"
+	}
+	
+	"UnitJumper_1c"
+	{
+		"NPCName"				"npc_dota_creature_lesser_nightcrawler"
+		"TotalUnitsToSpawn"		"24"
+		"UnitsPerSpawn"			"6"
+		"SpawnInterval"			"16"
+	}
+	
+	"UnitStun_1c"
+	{
+		"GroupWithUnit"			"UnitJumper_1c"
+		
+		"NPCName"				"npc_dota_creature_slithereen"
+		"TotalUnitsToSpawn"		"4"
+		"UnitsPerSpawn"			"1"
+	}
+	
+	"UnitStun_UnGrouped_1"
+	{
+		"NPCName"				"npc_dota_creature_slithereen"
+		"TotalUnitsToSpawn"		"4"
+		"UnitsPerSpawn"			"1"
+		"SpawnInterval"			"16"
+	}
+
+	// Stage 2 ================================================
+	"UnitJumper_2a"
+	{
+		"WaitForUnit"			"UnitJumper_1"
+		"WaitForTime"			"20"
+		
+		"NPCName"				"npc_dota_creature_lesser_nightcrawler"
+		"TotalUnitsToSpawn"		"12"
+		"UnitsPerSpawn"			"6"
+		"SpawnInterval"			"12"
+		
+		"SpawnerName"			"spawner1"
+		"Waypoint"				"path_invader1_1"
+	}
+	
+	"UnitJumper_2b"
+	{
+		"WaitForUnit"			"UnitJumper_1"
+		"WaitForTime"			"20"
+		
+		"NPCName"				"npc_dota_creature_lesser_nightcrawler"
+		"TotalUnitsToSpawn"		"12"
+		"UnitsPerSpawn"			"6"
+		"SpawnInterval"			"12"
+		
+		"SpawnerName"			"spawner2"
+		"Waypoint"				"path_invader2_1"
+	}
+	
+	"UnitJumper_2c"
+	{
+		"WaitForUnit"			"UnitJumper_1"
+		"WaitForTime"			"20"
+		
+		"NPCName"				"npc_dota_creature_lesser_nightcrawler"
+		"TotalUnitsToSpawn"		"12"
+		"UnitsPerSpawn"			"6"
+		"SpawnInterval"			"12"
+		
+		"SpawnerName"			"spawner3"
+		"Waypoint"				"path_invader3_1"
+	}
+	
+	"UnitJumper_2d"
+	{
+		"WaitForUnit"			"UnitJumper_1"
+		"WaitForTime"			"20"
+		
+		"NPCName"				"npc_dota_creature_lesser_nightcrawler"
+		"TotalUnitsToSpawn"		"12"
+		"UnitsPerSpawn"			"6"
+		"SpawnInterval"			"12"
+		
+		"SpawnerName"			"spawner4"
+		"Waypoint"				"path_invader4_1"
+	}
+	
+	"UnitStun_UnGrouped_2"
+	{
+		"WaitForUnit"			"UnitJumper_1"
+		"WaitForTime"			"20"
+	
+		"NPCName"				"npc_dota_creature_slithereen"
+		"TotalUnitsToSpawn"		"2"
+		"UnitsPerSpawn"			"1"
+		"SpawnInterval"			"12"
+	}
+}
