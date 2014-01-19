@@ -1,0 +1,19 @@
+"Round1b" // Bloodseeker boss
+{
+	"round_number"				"1"
+	"round_quest_title"			"#DOTA_Holdout_Round_BloodSeeker_Quest_Title"
+	"round_title"				"#DOTA_Holdout_Round_BloodSeeker_Title"
+	"MaxGold"					"5600"
+	"BagCount"					"50"
+	"BagVariance"				"30"
+	"FixedXP"					"5500"
+	
+	// Stage 1 ================================================
+	"UnitMelee_1"
+	{
+		"NPCName"				"npc_dota_creature_boss_bloodseeker"
+		"TotalUnitsToSpawn"		"1"
+		"UnitsPerSpawn"			"1"
+		"DontGiveGoal"    		"1"
+	}
+}

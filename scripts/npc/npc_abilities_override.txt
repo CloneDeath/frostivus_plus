@@ -197,6 +197,55 @@
 	{
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	}
+	
+	//=================================================================================================================
+	// Broodmother: Spawn Spiderlings
+	//=================================================================================================================
+	"broodmother_spawn_spiderlings"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"buff_duration"			"2.0 3.0 4.0 5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"spiderling_duration"	"60.0 80.0 100.0 120.0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"75 150 225 300"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"count"					"4 6 8 10"
+			}	 
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_speed"		"1200"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Chen: Test of Faith Teleport
+	//=================================================================================================================
+	"chen_test_of_faith_teleport"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS | DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+	}
 
 	//=================================================================================================================
 	// Dark Seer: Ion Shell
@@ -267,6 +316,7 @@
 	"disruptor_glimpse"
 	{
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -498,6 +548,43 @@
 	}
 	
 	//=================================================================================================================
+	// Lycan: Summon Wolves
+	//=================================================================================================================
+	"lycan_summon_wolves"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"wolf_index"				"1 2 3 4"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"wolf_duration"				"55.0 55.0 55.0 55.0"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"wolf_bat"					"1.25 1.2 1.15 1.1"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"wolf_damage"				"39 58 74 92"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"wolf_hp"					"400 480 560 640"
+			}
+		}
+	}
+	
+	//=================================================================================================================
 	// Necrolyte: Heartstopper Aura
 	//=================================================================================================================
 	"necrolyte_heartstopper_aura"
@@ -523,6 +610,7 @@
 	"obsidian_destroyer_astral_imprisonment"
 	{
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_MAGIC_IMMUNE_ALLIES"
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -624,7 +712,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"35 30 25 20"
+		"AbilityManaCost"				"100 90 80 70"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -665,7 +753,7 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"7 4 1 0"
+		"AbilityCooldown"				"10 8 6 4"
 
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
@@ -673,7 +761,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"40 30 20 10"
+		"AbilityManaCost"				"80 60 40 20"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -827,6 +915,68 @@
 			}
 		}
 	}	
+	
+	//=================================================================================================================
+	// Tiny: Grow
+	//=================================================================================================================
+	"tiny_grow"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_damage"				"50 100 150"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_attack_speed"		"-20 -35 -50"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_movement_speed"		"20 40 60"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"grow_bonus_damage_pct"		"35 50 65"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_range_scepter"		"107"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_cleave_radius_scepter"	"400"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_cleave_damage_scepter"	"50"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_building_damage_scepter"	"75"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"grow_bonus_damage_pct_scepter"		"50 65 80"
+			}
+			"10"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"modelscale"		"200 500 600 1000"
+			}
+		}
+	}
 
 	//=================================================================================================================
 	// Witch Doctor: Maledict

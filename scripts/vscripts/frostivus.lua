@@ -201,6 +201,8 @@ function FrostivusGameMode:_RestartGame()
 
 	-- Clean up the last round
 	self:_finishRound( false )
+	self:_initializeNextRound()
+	
 	while #self.vEnemiesRemaining > 0 do
 		local unitData = table.remove( self.vEnemiesRemaining )
 		if unitData and unitData.hEnemy and not unitData.hEnemy:IsNull() and unitData.hEnemy:IsAlive() then
@@ -878,7 +880,7 @@ end
 function FrostivusGameMode:GetRoundData( round_number )
 	local found = {}
 	for k, v in pairs( self.rounds ) do
-		if v.round_number == round_number then
+		if v.round_number == round_number or v.round_number == round_number - 1 or v.round_number == round_number + 1 then
 			table.insert(found, v);
 		end
 	end

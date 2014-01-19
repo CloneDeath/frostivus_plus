@@ -2177,6 +2177,7 @@
 		"SoundSet"					"n_creep_Melee"
 		"Level"						"1"
 		"ModelScale" 				".9"
+		"ConsideredHero"			"1"
 
 		// Abilities
 		//----------------------------------------------------------------
@@ -2781,6 +2782,109 @@
 			"DefaultState"				"Invade"
 		}
 	}
+	
+	//=================================================================================
+	// Creature: Wildwing Normal
+	//=================================================================================
+	"npc_dota_creature_wildwing_normal"
+	{										
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/creeps/neutral_creeps/n_creep_vulture_b/n_creep_vulture_b.mdl"	// Model.
+		"BaseClass"					"npc_dota_creature"
+		"SoundSet"					"n_creep_Melee"
+		"Level"						"1"
+		"ModelScale" 					".80"
+		//"IsNeutralUnitType"			"1"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					""			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"2"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"20"		// Damage range min.
+		"AttackDamageMax"			"25"		// Damage range max.	
+		"AttackRate"				"1.35"		// Speed of attack.
+		"AttackAnimationPoint"		"0.3"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			""			// Particle system model for projectile.
+		"ProjectileSpeed"			"0"			// Speed of projectile.		   
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"50"
+		"HealthBarOffset"			"170"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"30"		// Experience earn.
+		"BountyGoldMin"				"21"		// Gold earned min.
+		"BountyGoldMax"				"24"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"300"		// Speed.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"125"		// Base health.
+		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
+		"StatusMana"				"500"			// Base mana.
+		"StatusManaRegen"			"0"			// Mana regeneration rate.		 
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_STRONG"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		// Creature Data
+		//----------------------------------------------------------------------------------------------------------------------
+		"Creature"
+		{
+			"CanRespawn"				"0"
+
+			//Level Up
+			"HPGain"					"45"
+			"DamageGain"				"2"
+			"ArmorGain"					"0.25"
+			"MagicResistGain"			"0.1"
+			"MoveSpeedGain"				"1"
+			"BountyGain"				"2"
+			"XPGain"					"13"
+
+			"States"
+			{
+				"Invade"
+				{
+					"Name"				"Invade"
+					"Aggression"		"100.0"
+					"Avoidance"			"0.0"
+					"Support"			"0.0"
+				}
+			}
+
+			"DefaultState"				"Invade"
+
+		}
+	}		
 	
 	//=================================================================================
 	// Creature: Wildwing Laborer
@@ -5475,6 +5579,170 @@
 					"ItemDef"			"262"
 				}
 			}
+		}
+	}
+	
+	//=================================================================================
+	// Creature: Big Boss Bloodseeker
+	//=================================================================================
+	"npc_dota_creature_boss_bloodseeker"
+	{
+		// General
+		//
+		"BaseClass"					"npc_dota_creature"	// Class of entity of link to.
+		"Model"						"models/heroes/blood_seeker/blood_seeker.mdl"			// Model.
+		"ModelScale"				"2"
+		"Level"						"6"
+		"ConsideredHero"			"1"
+		
+		"MinimapIcon"				"minimap_roshancamp"
+		"MinimapIconSize"			"300"
+		
+		"SoundSet"					"Hero_Bloodseeker"								// Name of sound set.
+		"IdleSoundLoop"				"Hero_Bloodseeker.IdleLoop"
+
+		// Inventory
+		//----------------------------------------------------------------
+		"HasInventory"				"1"
+		
+		// Abilities
+		//----------------------------------------------------------------
+		
+		"Ability1"					"bloodseeker_bloodrage"			// Ability 1.
+		"Ability2"					"bloodseeker_blood_bath"		// Ability 2.
+		"Ability3"					"bloodseeker_thirst"			// Ability 3.
+		"Ability4"					"bloodseeker_rupture"			// Ability 4.
+		"Ability5"					"pudge_gold_bag_fountain"		// Ability 5.
+		"Ability6"					""								// Ability 6 - Extra.
+		"Ability7"					""								// Ability 7 - Extra.
+		"Ability8"					""								// Ability 8 - Extra.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// Physical protection.
+		"MagicalResistance"			"10"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"25"		// Damage range min.
+		"AttackDamageMax"			"30"		// Damage range max.
+		"AttackRate"				"0.4"		// Speed of attack.
+		"AttackAnimationPoint"		"0.5"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"2000"		// Range within a target can be acquired.
+		"AttackRange"				"128"		// Range within a target can be attacked.
+		"ProjectileModel"			""			// Particle system model for projectile.
+		"ProjectileSpeed"			"0"			// Speed of projectile.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"1000"		// Experience earn.
+		"BountyGoldMin"				"35"		// Gold earned min.
+		"BountyGoldMax"				"42"		// Gold earned max.
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"300"
+		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"	
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"			// Type of locomotion - ground, air
+		"MovementSpeed"				"350"		// Speed
+		"MovementTurnRate"			"0.5"		// Turning rate.
+
+		
+		"ParticleFile"				"particles/units/heroes/hero_bloodseeker.pcf"
+		"GameSoundsFile"			"scripts/game_sounds_heroes/game_sounds_bloodseeker.txt"
+		"VoiceFile"					"scripts/voscripts/game_sounds_vo_bloodseeker.txt"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2000"		// Base health.
+		"StatusHealthRegen"			"1.0"		// Health regeneration rate.
+		"StatusMana"				"1500"		// Base mana.
+		"StatusManaRegen"			"10.0"		// Mana regeneration rate.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_BADGUYS"			// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_SOFT"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"2000"		// Range of vision during day light.
+		"VisionNighttimeRange"		"2000"		// Range of vision at night time.
+
+		"vscripts"					"holdout_ai_pudge.lua"
+
+		// Creature Data
+		//----------------------------------------------------------------------------------------------------------------------
+		"Creature"
+		{
+			"CanRespawn"				"0"
+		
+			"EquippedItems"
+			{
+				"ForceStaff"
+				{
+					"Item"					"item_force_staff"
+				}
+				"PhaseBoots"
+				{
+					"Item"					"item_phase_boots"
+				}
+				//"Drums"
+				//{
+				//	"Item"					"item_ancient_janggo"
+				//	"Charges"				"10"
+				//}
+				//"Urn"
+				//{
+				//	"Item"					"item_urn_of_shadows"
+				//	"Charges"				"10"
+				//}
+			}
+
+			"DisableResistance"			"75.0"
+
+			//Level Up Parameters
+			//-----------------------------------------------------------------
+			"HPGain"					"200"
+			"DamageGain"				"10"
+			"ArmorGain"					"1"
+			"MagicResistGain"			"1"
+			"MoveSpeedGain"				"1"
+			"BountyGain"				"3"
+			"XPGain"					"100"
+
+			"DefaultState"				"Invade"
+			
+			//"AttachWearables"
+			//{
+			//	"Wearable1"
+			//	{
+			//		"ItemDef"			"47"
+			//	}
+			//	"Wearable2"
+			//	{
+			//		"ItemDef"			"259"
+			//	}
+			//	"Wearable3"
+			//	{
+			//		"ItemDef"			"260"
+			//	}
+			//	"Wearable4"
+			//	{
+			//		"ItemDef"			"261"
+			//	}
+			//	"Wearable5"
+			//	{
+			//		"ItemDef"			"262"
+			//	}
+			//}
 		}
 	}
 	
