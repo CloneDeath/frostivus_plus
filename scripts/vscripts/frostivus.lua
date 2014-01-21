@@ -530,7 +530,7 @@ function FrostivusGameMode:OnNPCSpawned( keys )
 	end
 	-- Set some level up stats
 	if spawnedUnit:IsCreature() then
-		spawnedUnit:SetHPGain( spawnedUnit:GetMaxHealth() * 0.3 ) -- LEVEL SCALING VALUE FOR HP
+		--[[spawnedUnit:SetHPGain( spawnedUnit:GetMaxHealth() * 0.3 ) -- LEVEL SCALING VALUE FOR HP
 		spawnedUnit:SetManaGain( 0 )
 		spawnedUnit:SetHPRegenGain( 0 )
 		spawnedUnit:SetManaRegenGain( 0 )
@@ -545,8 +545,10 @@ function FrostivusGameMode:OnNPCSpawned( keys )
 		spawnedUnit:SetAttackTimeGain( 0 )
 		spawnedUnit:SetMoveSpeedGain( 0 )
 		spawnedUnit:SetBountyGain( 0 )
-		spawnedUnit:SetXPGain( 0 )
-		spawnedUnit:CreatureLevelUp( self.nDifficulty + Convars:GetFloat( "frostivus_difficulty" ) )
+		spawnedUnit:SetXPGain( 0 )]]--
+		local BaseDifficulty = self.nDifficulty + Convars:GetFloat( "frostivus_difficulty" ) + self.nRoundNumber;
+		local LevelAdjustment = (BaseDifficulty * (HeroList:GetHeroCount() / 5.0)) - 1;
+		spawnedUnit:CreatureLevelUp( math.max( math.floor( LevelAdjustment ), 0) );
 	end
 
 	-- We really only track creatures

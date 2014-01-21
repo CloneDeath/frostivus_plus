@@ -122,7 +122,7 @@
 		"GroupWithUnit"			"UnitFodderGrouped_3a"
 		
 		"NPCName"				"npc_dota_creature_wildwing_normal"
-		"TotalUnitsToSpawn"		"1"
+		"TotalUnitsToSpawn"		"2"
 		"UnitsPerSpawn"			"1"
 	}
 	
@@ -131,7 +131,7 @@
 		"GroupWithUnit"			"UnitFodderGrouped_3b"
 		
 		"NPCName"				"npc_dota_creature_wildwing_shaman"
-		"TotalUnitsToSpawn"		"1"
+		"TotalUnitsToSpawn"		"3"
 		"UnitsPerSpawn"			"1"
 	}
 }
